@@ -19,17 +19,18 @@
 
   <body>
     <main>
-      <aside class="sidebar" data-sidebar>
+      <aside id="sidebar" class="sidebar" data-sidebar>
         <div class="sidebar-info">
           <figure class="avatar-box">
             <img
               src="./assets/images/my-avatar.png"
               alt="Literally Gojo"
-              width="80" />
+              width="80"
+              id="avatar" />
           </figure>
           <div class="info-content">
-            <h1 class="name" title="ASW">Adrian S Wijaya</h1>
-            <div class="dropping-texts">
+            <h1 class="name" title="ASW" id="my-name">Adrian S Wijaya</h1>
+            <div class="dropping-texts" id="dropping-texts">
               <div class="title">Web Dev 👍</div>
               <div class="title">HR 😲</div>
               <div class="title">Gunpla Builder 🤔</div>
@@ -53,9 +54,12 @@
               </div>
 
               <div class="contact-info">
-                <p class="contact-title">Email</p>
+                <p id="mail-label" class="contact-title">Email</p>
 
-                <a href="mailto:anaphrodisiac1@gmail.com" class="contact-link"
+                <a
+                  id="my-mail"
+                  href="mailto:anaphrodisiac1@gmail.com"
+                  class="contact-link"
                   >anaphrodisiac1@gmail.com</a
                 >
               </div>
@@ -67,9 +71,11 @@
               </div>
 
               <div class="contact-info">
-                <p class="contact-title">Birthday</p>
+                <p id="birthday" class="contact-title">Birthday</p>
 
-                <time datetime="2002-09-22">September 22, 2002</time>
+                <time id="birthdate" datetime="2002-09-22"
+                  >September 22, 2002</time
+                >
               </div>
             </li>
 
@@ -81,7 +87,9 @@
               <div class="contact-info">
                 <p class="contact-title">Location</p>
 
-                <address>Bekasi, Indonesia, Earth(Probably)</address>
+                <address id="address">
+                  Bekasi, Indonesia, Earth(Probably)
+                </address>
               </div>
             </li>
           </ul>
@@ -112,7 +120,7 @@
             </li>
 
             <li class="social-item">
-              <a href="#" class="social-link">
+              <a href="#" class="social-link" id="❤">
                 <ion-icon name="heart-outline"></ion-icon>
               </a>
             </li>
@@ -121,7 +129,7 @@
       </aside>
 
       <div class="main-content">
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
           <ul class="navbar-list">
             <li class="navbar-item">
               <button class="navbar-link active" data-nav-link>About</button>
@@ -850,7 +858,7 @@
                 </li>
 
                 <li class="select-item">
-                  <button data-select-item>Work</button>
+                  <button data-select-item>Professional</button>
                 </li>
               </ul>
             </div>
@@ -1234,42 +1242,103 @@
           </section>
         </article>
 
-        <!--
-        - #BLOG
-      -->
-
-        <!-- <article class="blog" data-page="blog">
+        <article class="blog lv-page" data-page="sanya">
           <header>
-            <h2 class="h2 article-title">Blog</h2>
+            <h2 class="h2 article-title" id="sanya">Sanya Lestari</h2>
           </header>
 
+          <section class="about-text">
+            <p>
+              Sanya Lestari, also known as Sania Ashara or Nia, is a
+              pure-hearted girl who has yet to experience the thrill of a
+              relationship. With her innocent charm and perfectionist nature,
+              she embodies a rare beauty. Nia shares many traits with Ian, often
+              putting others' feelings before her own, revealing a heart that
+              cares deeply. In her quiet strength, she inspires those around her
+              to cherish the moments that truly matter.
+            </p>
+          </section>
+
+          <section class="service">
+            <h3 class="h3 service-title">What We Fighting For</h3>
+
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/love.svg"
+                    alt="Web development icon"
+                    width="40" />
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Our Love</h4>
+                  <p class="service-item-text">
+                    The feelings we've fought for together over these past five
+                    years.
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/dream.svg"
+                    alt="mobile app icon"
+                    width="40" />
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Our Dream</h4>
+                  <p class="service-item-text">
+                    Our dream of building a family and living happily ever
+                    after~
+                  </p>
+                </div>
+              </li>
+
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/future.svg"
+                    alt="camera icon"
+                    width="40" />
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Our Future</h4>
+                  <p class="service-item-text">
+                    To shape our future together. We may not know exactly what
+                    it holds, but at least let's fight for it side by side.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
           <section class="blog-posts">
+            <h3 class="h3 service-title">First Moments, Forever Memories</h3>
             <ul class="blog-posts-list">
               <li class="blog-post-item">
                 <a href="#">
                   <figure class="blog-banner-box">
                     <img
-                      src="./assets/images/blog-1.jpg"
-                      alt="Design conferences in 2022"
+                      src="./assets/images/smk.png"
+                      alt="SMKN 1 Karawang"
                       loading="lazy" />
                   </figure>
 
                   <div class="blog-content">
                     <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
+                      <p class="blog-category">The Spot We Met</p>
                     </div>
 
-                    <h3 class="h3 blog-item-title">
-                      Design conferences in 2022
-                    </h3>
+                    <h3 class="h3 blog-item-title">SMKN 1 Karawang</h3>
 
                     <p class="blog-text">
-                      Veritatis et quasi architecto beatae vitae dicta sunt,
-                      explicabo.
+                      A vocational school in Karawang, where so many events
+                      shaped Ian and Nia’s personalities and traits. It seems
+                      like the school truly lived up to its character-building
+                      slogan that’s often praised. Beyond all that, this place
+                      holds countless memories and, most importantly, is where
+                      Ian and Nia first crossed paths.
                     </p>
                   </div>
                 </a>
@@ -1279,161 +1348,44 @@
                 <a href="#">
                   <figure class="blog-banner-box">
                     <img
-                      src="./assets/images/blog-2.jpg"
+                      src="./assets/images/sanya1.jpg"
                       alt="Best fonts every designer"
                       loading="lazy" />
                   </figure>
 
                   <div class="blog-content">
                     <div class="blog-meta">
-                      <p class="blog-category">Design</p>
+                      <p class="blog-category">First Snapshot</p>
 
                       <span class="dot"></span>
 
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
+                      <time datetime="2018-05-05">May 05, 2018</time>
                     </div>
 
                     <h3 class="h3 blog-item-title">
-                      Best fonts every designer
+                      First Encounter & Cherished Memories
                     </h3>
 
                     <p class="blog-text">
-                      Sed ut perspiciatis, nam libero tempore, cum soluta nobis
-                      est eligendi.
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/blog-3.jpg"
-                      alt="Design digest #80"
-                      loading="lazy" />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                    <p class="blog-text">
-                      Excepteur sint occaecat cupidatat no proident, quis
-                      nostrum exercitationem ullam corporis suscipit.
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/blog-4.jpg"
-                      alt="UI interactions of the week"
-                      loading="lazy" />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">
-                      UI interactions of the week
-                    </h3>
-
-                    <p class="blog-text">
-                      Enim ad minim veniam, consectetur adipiscing elit, quis
-                      nostrud exercitation ullamco laboris nisi.
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/blog-5.jpg"
-                      alt="The forgotten art of spacing"
-                      loading="lazy" />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">
-                      The forgotten art of spacing
-                    </h3>
-
-                    <p class="blog-text">
-                      Maxime placeat, sed do eiusmod tempor incididunt ut labore
-                      et dolore magna aliqua.
-                    </p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="blog-post-item">
-                <a href="#">
-                  <figure class="blog-banner-box">
-                    <img
-                      src="./assets/images/blog-6.jpg"
-                      alt="Design digest #79"
-                      loading="lazy" />
-                  </figure>
-
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <p class="blog-category">Design</p>
-
-                      <span class="dot"></span>
-
-                      <time datetime="2022-02-23">Fab 23, 2022</time>
-                    </div>
-
-                    <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                    <p class="blog-text">
-                      Optio cumque nihil impedit uo minus quod maxime placeat,
-                      velit esse cillum.
+                      Not the best memory, honestly, because at that time, Nia
+                      had completely closed off her heart—even going as far as
+                      lying to push me away. It wasn’t all that bad (just a
+                      month of being heartbroken). But from that moment, through
+                      all the ups and downs, we finally found a way for her to
+                      open up, and now, I’m a guest in her heart who never wants
+                      to leave.
                     </p>
                   </div>
                 </a>
               </li>
             </ul>
           </section>
-        </article> -->
+        </article>
       </div>
     </main>
 
-    <!--
-    - custom js link
-  -->
     <script src="./assets/js/script.js"></script>
 
-    <!--
-    - ionicon link
-  -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

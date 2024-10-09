@@ -99,6 +99,51 @@ for (let i = 0; i < navigationLinks.length; i++) {
         pages[i].classList.add("active");
         navigationLinks[i].classList.add("active");
         window.scrollTo(0, 0);
+        if (document.body.classList.contains("lv-body")) {
+          document.body.classList.remove("lv-body");
+          const sidebar = document.getElementById("sidebar");
+          sidebar.classList.remove("lv-bar");
+        }
+        const sidebar = document.getElementById("sidebar");
+        if (sidebar.classList.contains("lv-bar")) {
+          sidebar.classList.remove("lv-bar");
+          document.body.classList.remove("lv-body");
+        }
+        const navbar = document.getElementById("navbar");
+        if (navbar.classList.contains("lv-nav")) {
+          navbar.classList.remove("lv-nav");
+        }
+        const myName = document.getElementById("my-name");
+        myName.innerHTML = "Adrian S Wijaya";
+        const droppingText = document.getElementById("dropping-texts");
+        droppingText.classList.remove("lv-drop");
+        const moreBtn = document.querySelectorAll(".info_more-btn");
+        moreBtn.forEach((btn) => {
+          if (btn.classList.contains("lv-btn")) {
+            btn.classList.remove("lv-btn");
+          }
+        });
+        const iconBox = document.querySelectorAll(".icon-box");
+        iconBox.forEach((box) => {
+          if (box.classList.contains("lv-icon")) {
+            box.classList.remove("lv-icon");
+          }
+        });
+        const avatar = document.getElementById("avatar");
+        avatar.src = "assets/images/my-avatar.png";
+        avatar.alt = "Literally Gojo";
+        const mailLabel = document.getElementById("mail-label");
+        mailLabel.innerHTML = "Email";
+        const myMail = document.getElementById("my-mail");
+        myMail.innerHTML = "anaphrodisiac1@gmail.com";
+        myMail.href = "mailto:anaphrodisiac1@gmail.com";
+        const birthday = document.getElementById("birthday");
+        birthday.innerHTML = "Birthday";
+        const birthdate = document.getElementById("birthdate");
+        birthdate.innerHTML = "September 22, 2002";
+        birthdate.datetime = "2002-09-22";
+        const address = document.getElementById("address");
+        address.innerHTML = "Bekasi, Indonesia, Earth(Probably)";
       } else {
         pages[i].classList.remove("active");
         navigationLinks[i].classList.remove("active");
@@ -115,4 +160,54 @@ hradmin.addEventListener("mouseover", function () {
 
 hradmin.addEventListener("mouseout", function () {
   hradmin.innerHTML = oldHrText;
+});
+
+const love = document.getElementById("❤");
+const sanyaPage = document.querySelector("[data-page='sanya']");
+let clickCount = 0;
+love.addEventListener("click", function () {
+  clickCount++;
+  if (clickCount === 3) {
+    document.body.classList.add("lv-body");
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.add("lv-bar");
+    const navbar = document.getElementById("navbar");
+    navbar.classList.add("lv-nav");
+    const myName = document.getElementById("my-name");
+    myName.innerHTML = "Adrian & Sanya";
+    const droppingText = document.getElementById("dropping-texts");
+    droppingText.classList.add("lv-drop");
+    const moreBtn = document.querySelectorAll(".info_more-btn");
+    moreBtn.forEach((btn) => {
+      btn.classList.add("lv-btn");
+    });
+    const iconBox = document.querySelectorAll(".icon-box");
+    iconBox.forEach((box) => {
+      box.classList.add("lv-icon");
+    });
+    const avatar = document.getElementById("avatar");
+    avatar.src = "assets/images/secret-avatar.png";
+    avatar.alt = "Adrian & Sanya";
+    const mailLabel = document.getElementById("mail-label");
+    mailLabel.innerHTML = "Our Wish";
+    const myMail = document.getElementById("my-mail");
+    myMail.innerHTML = "Be Together Forever";
+    myMail.href = "#";
+    const birthday = document.getElementById("birthday");
+    birthday.innerHTML = "Our Anniversary";
+    const birthdate = document.getElementById("birthdate");
+    birthdate.innerHTML = "September 17, 2019";
+    birthdate.datetime = "2019-09-17";
+    const address = document.getElementById("address");
+    address.innerHTML = "Our Home";
+
+    sanyaPage.classList.add("active");
+    for (let i = 0; i < pages.length; i++) {
+      if (pages[i] !== sanyaPage) {
+        pages[i].classList.remove("active");
+      }
+    }
+
+    clickCount = 0;
+  }
 });

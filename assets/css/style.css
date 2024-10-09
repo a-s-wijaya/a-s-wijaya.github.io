@@ -327,7 +327,7 @@ main {
 
 .avatar-box {
   background: var(--bg-gradient-onyx);
-  border-radius: 20px;
+  border-radius: 14px;
 }
 
 .info-content .name {
@@ -642,6 +642,17 @@ main {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.testimonials-text a {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 5px 10px;
+  background: var(--bg-gradient-jet);
+  color: var(--gray);
+  border-radius: 8px;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
 }
 
 /**
@@ -1142,11 +1153,12 @@ main {
 
 .blog-post-item > a {
   position: relative;
-  background: var(--border-gradient-onyx);
+  background: #f6f1c3;
   height: 100%;
   box-shadow: var(--shadow-4);
   border-radius: 16px;
   z-index: 1;
+  cursor: default !important;
 }
 
 .blog-post-item > a::before {
@@ -1154,8 +1166,9 @@ main {
   position: absolute;
   inset: 1px;
   border-radius: inherit;
-  background: var(--eerie-black-1);
+  background: #f6f1c3;
   z-index: -1;
+  cursor: default !important;
 }
 
 .blog-banner-box {
@@ -1174,6 +1187,7 @@ main {
 
 .blog-post-item > a:hover .blog-banner-box img {
   transform: scale(1.1);
+  cursor: default !important;
 }
 
 .blog-content {
@@ -1189,13 +1203,14 @@ main {
 }
 
 .blog-meta :is(.blog-category, time) {
-  color: var(--gray-70);
+  color: var(--gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
+  cursor: default !important;
 }
 
 .blog-meta .dot {
-  background: var(--gray-70);
+  background: var(--gray);
   width: 4px;
   height: 4px;
   border-radius: 4px;
@@ -1208,7 +1223,8 @@ main {
 }
 
 .blog-post-item > a:hover .blog-item-title {
-  color: var(--orange-yellow-crayola);
+  color: var(--gray-70);
+  cursor: default !important;
 }
 
 .blog-text {
@@ -1408,6 +1424,74 @@ textarea.form-input::-webkit-resizer {
   }
 }
 
+.lv-body {
+  background-color: #d9e3ff;
+}
+
+.sidebar.lv-bar {
+  background-color: #c1bffa;
+}
+
+.lv-page {
+  background-color: #c1bffa;
+}
+
+.navbar.lv-nav {
+  background-color: #f6f1c3;
+}
+
+.lv-page .article-title::after {
+  background-color: #f6f1c3;
+}
+
+.lv-page .about-text {
+  font-weight: 400;
+  color: var(--black);
+}
+
+.info_more-btn.lv-btn {
+  background-color: #c3f6d7;
+  color: var(--black);
+}
+
+.info_more-btn.lv-btn::before {
+  background-color: #c3f6d7;
+}
+
+.info_more-btn.lv-btn:hover,
+.info_more-btn.lv-btn:focus {
+  background-color: #68e89b;
+}
+
+.info_more-btn.lv-btn:hover::before,
+.info_more-btn.lv-btn:focus::before {
+  background-color: #68e89b;
+}
+
+.info_more-btn.lv-btn span {
+  color: var(--black);
+  display: none;
+}
+
+.icon-box.lv-icon {
+  background-color: #f9e450;
+}
+
+.icon-box.lv-icon::before {
+  background-color: #f9e450;
+}
+
+.lv-page .service-item {
+  background-color: #efc3f6;
+}
+
+.lv-page .service-item::before {
+  background-color: #efc3f6;
+}
+
+.dropping-texts.lv-drop {
+  display: none;
+}
 /*-----------------------------------*\
   #RESPONSIVE
 \*-----------------------------------*/
@@ -1535,6 +1619,11 @@ textarea.form-input::-webkit-resizer {
   }
 
   .info_more-btn span {
+    display: block;
+    font-size: var(--fs-8);
+  }
+
+  .info_more-btn.lv-btn span {
     display: block;
     font-size: var(--fs-8);
   }
