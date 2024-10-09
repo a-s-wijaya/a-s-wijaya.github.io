@@ -196,8 +196,8 @@ love.addEventListener("click", function () {
     const birthday = document.getElementById("birthday");
     birthday.innerHTML = "Our Anniversary";
     const birthdate = document.getElementById("birthdate");
-    birthdate.innerHTML = "September 17, 2019";
-    birthdate.datetime = "2019-09-17";
+    birthdate.innerHTML = "September 27, 2019";
+    birthdate.datetime = "2019-09-27";
     const address = document.getElementById("address");
     address.innerHTML = "Our Home";
 
